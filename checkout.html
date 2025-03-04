@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Rainy Days" content="The world's most popular and largest online store for rain gear and accessories.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rainy Days</title>
+    <link rel="icon" href="img/favicon.ico" type="image/icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/a1d60051cd.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="headernav">
+            <a href="index.html"><img class="headerlogo" src="img/RainyDays_TextLogoUnderline.png" alt="Rainy Days Logo"></a>
+            <ul>
+        
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <div class="navicons">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-circle-user"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h3>CHECKOUT</h3>
+        <p>Please fill out your details and payment information.</p>
+        <div id="paypal"><a href="http://www.paypal.com">
+        <p id="paypalicon">Buy with<img src="/img/PayPalLogo.svg"></p></a>
+        </div>
+        <form id="checkout-details" action="confirmation.html" method="get">
+            <h4>Shipping Information</h4>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="text" id="address" name="address" placeholder="Address">
+            <div class="form-control">
+            <input type="number" id="name" name="name" placeholder="Post Code">
+            <input type="text" id="city" name="city" placeholder="City">
+            </div>
+            <input type="text" id="country" name="country" placeholder="Country">
+            <h4>Payment Information</h4>
+            <div class="paymentdiv">
+                <input type="number" id="cardnumber" name="cardnumber" placeholder="Card Number">
+                <input type="text" id="cardname" name="cardname" placeholder="Name on Card">
+                <div class="form-control">
+                <input type="text" id="expdate" name="expdate" placeholder="Expiration Date">
+                <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                </div>
+            </div>
+            <button id="submitbutton" type="submit"><h3>PLACE ORDER</h3></button>
+        </form>
+
+    </main>
+        <footer>
+            <nav class="footernav">
+                <a href="index.html"><img class="footerlogo" src="img/RainyDays_HalfLogo.png" alt="Rainy Days Logo"></a>
+                <ul>
+                    <li><a href="products.html">SHOP<br>Men<br>Women<br></a></li>
+                    <li>POLICIES<br>Return Policy<br>Shipping</a></li>
+                    <li>SUPPORT<br>FAQ<br>Contact Us</li>
+                </ul>
+        </footer> 
+</body>
+</html>
