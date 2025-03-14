@@ -6,52 +6,91 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --logo-color: #0A3641;
+    --main-color: #225C6A; 
+    --secondary-color: #488595;
+    --tertiary-color: #7CB2BF;
+    --navigation-color: #BFE1EA;
+    --PayPal-Yellow: #FFC43A;
+    --text-color: black;
+}
+
 body {
     font-family: Open-Sans, sans-serif;
-    background-color: #f4f4f4;
+    font-size: 0.8em;
+    background-color: #fff;
     color: #333;
-    margin: 0;
 }
 
 
+label::before {
+    font-family: "Material Icons";
+    content: "menu";
+    color: var(--logo-color);
+    font-size: 1em;
+}
+
 h1 {
-    font-size: 40px;
+    font-size: 4vw;
     line-height: 5px;
 }
 
 h2 {
-    font-size: 27px;
+    font-size: 4vw;
     line-height: 5px;
     font-weight: lighter;
 }
 
+h3 {
+    font-size: 2vw;
+    line-height: 5px;
+    font-weight: strong;
+    color: var(--text-color);
+}
+
 a {
-    color: #fff;
+    color: var(--logo-color);
     text-decoration: none;
 }
 
 .ctalarge {
-    color: #fff;
+    color: var(--logo-color);
     display: inline-block;
-    padding: 10px 20px;
-    width: 20%;
+    padding: 15px 5px;
+    width: 30vw;
     justify-content: center;
     border-radius: 15px;
-    background: #0A3641;
+    background: var(--navigation-color);
+    border: 6px solid var(--logo-color);
     text-decoration: none;
     margin: 10px;
+    font-weight: bold;
 }
 
 .ctalarge:hover {
     border: 1px solid #082A32;
     border-radius: 15px;
-    background: #488595;
 } 
 
 .ctalarge:active {
     border: 1px solid #082A32;
     border-radius: 15px;
     background: #082A32;
+}
+
+.ctasmall {
+    color: var(--logo-color);
+    display: inline-block;
+    padding: 10px 2.5px;
+    width: 20vw;
+    justify-content: center;
+    border-radius: 15px;
+    background: var(--navigation-color);
+    border: 3px solid var(--logo-color);
+    text-decoration: none;
+    margin: 5px;
+    font-weight: bold;
 }
 
 header {
@@ -61,7 +100,7 @@ header {
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: #488595;
+    background-color: var(--navigation-color);
     z-index: 2;
 }
 
@@ -88,14 +127,16 @@ header {
 }
 
 .headernav ul li a {
-    color: #fff;
+    color: var(--logo-color);
     text-decoration: none;
 }
+
 
 .navlinks {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding-top: 5px;
 }
 
 .navicons {
@@ -128,6 +169,77 @@ header {
 
 }
 
+.landingpageshopping {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.shopping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    border: solid 2px red;
+}
+
+.gender {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.manimg, .womanimg {
+    width: 50%;
+    height: auto;
+    margin: 15px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.topseller-card {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.product-card {
+    width: 80%;
+    height: auto;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.productimg {
+    max-width: 50%;
+    max-height: 80%;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.product-info {
+    margin-right: 0px;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100%;
+    margin-left: 10px;
+    padding: 0;
+}
+
 form {
     width: 40%;
 }
@@ -138,12 +250,12 @@ form {
 }
 
 .form-control > #city, #cvv {
-    margin-left: 10px;
+    margin-left: 0px;
     padding: 10px;
 }
 
 form {
-    margin: 10px;
+    margin: 00px;
     padding: 0;
     display: block;
 }
@@ -203,92 +315,98 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 0;
     padding: 0;
+    width: 100%;
 }
 
 .footernav {
-    background-color: #488595;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
+    background-color: var(--navigation-color);
+    margin-bottom: 0;
+    height: auto;
+    width: 100%;
 }
 
 .footernav ul {
     display: flex;
+    align-items: flex-start;
     list-style: none;
-    margin-right: 50%;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
     margin-top: 0;
-}
-
-.footernav ul li {
-    margin-right: 80%;
-    margin-left: 20%
+    color: var(--logo-color);
+    width: 100%;
 }
 
 .footernav ul li a {
-    color: #fff;
+    color: var(--logo-color);
     text-decoration: none;
+    
 }
 
 .footerlogo {
     max-width: 200px;
     max-height: 100px;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
     justify-content: center;
+
 }
 
-.heroimg {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    transform: scaleX(-1);
-    z-index: 1;
+.shoplinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
 }
+
+.policieslinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.supportlinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+
 
 .hero {
-    background: url("/img/heroimg.jpg") no-repeat center center/cover;    
-    background-size: cover;
+    background: url("/img/heroimg.jpg") no-repeat center center/cover; 
     height: 100vh;
-    width: 100%;
+    width: 100;
     margin: 0px;
+    padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
 .herocontent {
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    top: 35%;    
+    top: 40%;    
+    right: 1%;
     margin-right: 20px;
 }
 
-.manimg, .womanimg {
-    max-width: 20%;
-    height: auto;
-    margin: 15px;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    border-radius: 5px;
-}
+
 
 .menubars{
     display: none;
@@ -297,6 +415,27 @@ footer {
 
 .hamburgerx {
     display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .landingpageshopping {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gender {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .topseller-card {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -337,37 +476,49 @@ footer {
             width: 50%;
             position: absolute;
             top: 50px;
-            background-color: #488595;
+            background-color: var(--navigation-color);
             padding: 20px;
     }
- 
-    #menubars:checked ~ .menubars {
-        display: none;
+
+    #menubars:checked + label::before {
+        font-family: "Material Icons";
+        content: "close";
+        font-size: 1em;
+      }
+
+      .hero {
+        background: url("/img/heroimg.jpg") no-repeat cover;
+        background-position: 30% 100%;
+        height: 100vh;
+        width: 100vw;
     }
- 
-    #menubars:checked ~ .hamburgerx {
-        display: flex;
+
+    .hero::before {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .herocontent {
         color: #fff;
-        font-size: 30px;
-        margin: 10px 10px;
-        width: fit-content;
-    }
- 
-    #menubars:checked ~ #hamburgerx {
-        display: none;
-    }
- 
-    #hamburgerx:checked ~ .menubars {
+        text-align: center;
         display: flex;
-        color: #fff;
-        font-size: 30px;
-        margin: 10px 10px;
-        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        
     }
- 
-    #hamburgerx:checked ~ .headernav .navlinks {
-        display: none;
+
+    .footernav ul {
+        display: inline-block;
     }
- 
+
 
 }
