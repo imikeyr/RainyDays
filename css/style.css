@@ -16,6 +16,13 @@ html {
     --text-color: black;
 }
 
+main {
+    margin: 80px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Open-Sans, sans-serif;
     font-size: 0.8em;
@@ -107,6 +114,7 @@ header {
 .headernav {
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 80px;
@@ -116,6 +124,7 @@ header {
 .headernav ul {
     list-style: none;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -134,6 +143,7 @@ header {
 
 .navlinks {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     padding-top: 5px;
@@ -141,10 +151,12 @@ header {
 
 .navicons {
     display: flex;
+    flex-wrap: nowrap;
 }
 
 .navmountain {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     width: 50%;
 }
@@ -165,27 +177,32 @@ header {
     max-width: 120px;
     max-height: 60px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 
 }
 
 .landingpageshopping {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 
 }
 
 .shopping {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    border: solid 2px red;
+    padding: 0;
+    border: solid 2px blue;
 }
 
 .gender {
     display: flex;
+    flex-wrap: nowrap;
     width: 50%;
     height: 100%;
 }
@@ -202,15 +219,16 @@ header {
     width: 50%;
     height: auto;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
 }
 
 
 
 .product-card {
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin: 15px;
+    margin-right: 50px;
     display: flex;
     align-items: center;
 }
@@ -330,6 +348,7 @@ footer {
 
 .footernav ul {
     display: flex;
+    flex-wrap: nowrap;
     align-items: flex-start;
     list-style: none;
     padding-top: 20px;
@@ -352,12 +371,14 @@ footer {
     margin-bottom: 10px;
     margin-right: 10px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
 
 }
 
 .shoplinks {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     padding: 10px;
@@ -365,6 +386,7 @@ footer {
 
 .policieslinks {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     padding: 10px;
@@ -372,6 +394,7 @@ footer {
 
 .supportlinks {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     padding: 10px;
@@ -386,6 +409,7 @@ footer {
     margin: 0px;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -397,6 +421,7 @@ footer {
     padding: 10px;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
