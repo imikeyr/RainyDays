@@ -1,5 +1,6 @@
-html {
+html, body {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *::before, *::after {
@@ -13,22 +14,33 @@ html {
     --tertiary-color: #7CB2BF;
     --navigation-color: #BFE1EA;
     --PayPal-Yellow: #FFC43A;
+    --container-gray: #D9D9D9;
     --text-color: black;
-}
-
-main {
-    margin: 80px;
-    padding: 0;
-    width: 100%;
-    height: auto;
 }
 
 body {
     font-family: Open-Sans, sans-serif;
     font-size: 0.8em;
-    background-color: #fff;
     color: #333;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    padding: 5px;
+    width: 100%;
+}
+
 
 
 label::before {
@@ -39,20 +51,25 @@ label::before {
 }
 
 h1 {
+    font-family: Oswald, sans-serif;
+    font-weight: lighter;
     font-size: 4vw;
     line-height: 5px;
 }
 
 h2 {
+    font-family: Oswald, sans-serif;
+    font-weight: lighter;
     font-size: 4vw;
     line-height: 5px;
     font-weight: lighter;
 }
 
 h3 {
+    font-family: Oswald, sans-serif;
     font-size: 2vw;
     line-height: 5px;
-    font-weight: strong;
+    font-weight: lighter;
     color: var(--text-color);
 }
 
@@ -88,11 +105,11 @@ a {
 
 .ctasmall {
     color: var(--logo-color);
-    display: inline-block;
     padding: 10px 2.5px;
-    width: 20vw;
-    justify-content: center;
     border-radius: 15px;
+    display: inline-flex;
+    position: relative;
+    left: 70%;
     background: var(--navigation-color);
     border: 3px solid var(--logo-color);
     text-decoration: none;
@@ -190,14 +207,26 @@ header {
 }
 
 .shopping {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    padding: 0;
-    border: solid 2px blue;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 5px;
 }
 
 .gender {
@@ -223,6 +252,25 @@ header {
     align-items: center;
 }
 
+.splitcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.splitleft, .splitright {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}
 
 
 .product-card {
@@ -247,19 +295,127 @@ header {
     margin-right: 0px;
 }
 
-#newsletter {
+.article-no {
+    font-size: 0.6rem;
+}
+
+.article-colors, .article-size {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: px;
+}
+
+.color-options, .size-select {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+}
+
+.cart-product-card {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-productimg {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    height: 100%;
-    margin-left: 10px;
+    max-width: 20%;
+    max-height: 20%;
     padding: 0;
+    border-radius: 5px;
+}
+
+.cart-product-info {
+    margin-right: 0px;
+    font-size: 0.7rem;
+}
+
+.cart-option-items {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cart-quantity {
+   
+}
+
+.cart-article-colors, .cart-article-size {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: px;
+}
+
+.cart-color-options, .cart-size-select {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+}
+
+.cart-product-price {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.rightcontainer, .confirmationcontainer {
+   background-color: var(--container-gray);
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.cart-summary-items {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    border: solid 1px red;
+}
+
+.summary-text {
+    display: flex;
+    text-align: left;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: space-around;
+    border: solid 1px blue;
+    margin-right: 50px;
+}
+
+.summary-number {
+    display: flex-end;
+    text-align: right;
+    position: relative;
+    left: 90%;
+    width: 100%;
+    border: solid 1px green;
+}
+
+
+.vertical-line {
+    background-color: var(--logo-color);
+    width: 3px;
+    height: auto;
+}
+
+.horizontal-line {
+    background-color: var(--logo-color);
+    width: 70%;
+    align-self: center;
+    height: 3px;
+    margin: 20px 0 20px 0;
 }
 
 form {
-    width: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .form-control {
@@ -404,8 +560,8 @@ footer {
 
 .hero {
     background: url("/img/heroimg.jpg") no-repeat center center/cover; 
-    height: 100vh;
-    width: 100;
+    min-height: 100vh;
+    width: 100vw;
     margin: 0px;
     padding: 0;
     display: flex;
@@ -431,7 +587,9 @@ footer {
     margin-right: 20px;
 }
 
-
+.product-info {
+    margin: 5px;
+}
 
 .menubars{
     display: none;
@@ -440,6 +598,24 @@ footer {
 
 .hamburgerx {
     display: none;
+}
+
+#comingsoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#puppy {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -458,6 +634,13 @@ footer {
     .topseller-card {
         display: flex;
         flex-direction: row;
+        width: 100%;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         width: 100%;
     }
 
