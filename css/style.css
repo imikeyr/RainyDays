@@ -60,14 +60,14 @@ h1 {
 h2 {
     font-family: Oswald, sans-serif;
     font-weight: lighter;
-    font-size: 4vw;
+    font-size: 3.8vw;
     line-height: 5px;
     font-weight: lighter;
 }
 
 h3 {
     font-family: Oswald, sans-serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
     line-height: 5px;
     font-weight: lighter;
     color: var(--text-color);
@@ -92,16 +92,6 @@ a {
     font-weight: bold;
 }
 
-.ctalarge:hover {
-    border: 1px solid #082A32;
-    border-radius: 15px;
-} 
-
-.ctalarge:active {
-    border: 1px solid #082A32;
-    border-radius: 15px;
-    background: #082A32;
-}
 
 .ctasmall {
     color: var(--logo-color);
@@ -109,7 +99,7 @@ a {
     border-radius: 15px;
     display: inline-flex;
     position: relative;
-    left: 70%;
+    left: 50%;
     background: var(--navigation-color);
     border: 3px solid var(--logo-color);
     text-decoration: none;
@@ -229,6 +219,8 @@ header {
     padding-right: 5px;
 }
 
+
+
 .gender {
     display: flex;
     flex-wrap: nowrap;
@@ -267,9 +259,20 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
     margin: 10px;
     padding: 10px;
+
+}
+
+.confirmationleft {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 200%;
+    margin: 10px;
+    padding: 10px;
+
 }
 
 
@@ -281,11 +284,27 @@ header {
     align-items: center;
 }
 
+.productsplitright {
+    display: block;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.suggestion-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
 .productimg {
-    max-width: 50%;
-    max-height: 80%;
+    width: 100%;
     height: auto;
-    padding: 0;
+    margin: 0px;
+    padding: 25px;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
@@ -323,8 +342,15 @@ header {
 .cart-productimg {
     display: flex;
     flex-direction: column;
-    max-width: 20%;
+    max-width: 30%;
     max-height: 20%;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.small-productimg {
+    max-width: 50%;
+    max-height: 50%;
     padding: 0;
     border-radius: 5px;
 }
@@ -332,6 +358,7 @@ header {
 .cart-product-info {
     margin-right: 0px;
     font-size: 0.7rem;
+    width: 100%;
 }
 
 .cart-option-items {
@@ -339,9 +366,6 @@ header {
     flex-wrap: nowrap;
 }
 
-.cart-quantity {
-   
-}
 
 .cart-article-colors, .cart-article-size {
     display: flex;
@@ -360,13 +384,30 @@ header {
     font-weight: bold;
 }
 
-.rightcontainer, .confirmationcontainer {
+.rightcontainer, .order-summary {
    background-color: var(--container-gray);
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
     margin: 0;
     padding: 10px;
+}
+
+.confirmationcontainer {
+     display: flex;
+     flex-wrap: nowrap;
+     width: 100%;
+     margin: 0;
+     padding: 10px;
+ }
+
+#confirmationimage {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 0;
+    border-radius: 5px;
 }
 
 .cart-summary-items {
@@ -374,28 +415,36 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
-    border: solid 1px red;
+
+}
+
+.summarycontainer {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
 }
 
 .summary-text {
-    display: flex;
-    text-align: left;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: space-around;
-    align-items: space-around;
-    border: solid 1px blue;
-    margin-right: 50px;
+    display: block;
+    width: 50%;
 }
 
 .summary-number {
     display: flex-end;
     text-align: right;
-    position: relative;
-    left: 90%;
-    width: 100%;
-    border: solid 1px green;
+    width: 50%;
 }
+
+.summary-number-confirmation {
+    display: flex-end;
+    text-align: right;
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+
 
 
 .vertical-line {
@@ -407,9 +456,10 @@ header {
 .horizontal-line {
     background-color: var(--logo-color);
     width: 70%;
-    align-self: center;
     height: 3px;
-    margin: 20px 0 20px 0;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 form {
@@ -467,6 +517,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 
 #paypalicon {
     display: flex;
+    margin: auto;
     width: 300px;
     padding: 12px 16px;
     justify-content: center;
@@ -491,6 +542,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 footer {
     margin-top: 50px;
     margin-bottom: 0;
+    margin-right: 0;
     padding: 0;
     width: 100%;
 }
@@ -500,6 +552,7 @@ footer {
     margin-bottom: 0;
     height: auto;
     width: 100%;
+    margin: 0 auto;
 }
 
 .footernav ul {
@@ -556,18 +609,78 @@ footer {
     padding: 10px;
 }
 
+.collage {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.collageimg1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collageimg2 {
+    width: 100%;
+    height: auto;
+}
+
+.collage-text {
+    margin: auto;
+    height: auto;
+    width: 75%;
+    padding: 0x;
+    text-align: center;
+}
+
+.collage-text > p {
+    font-size: 1rem;    
+    color: #fff;
+    margin: 20px;
+    padding: 10px;
+}   
+
+
+
 
 
 .hero {
     background: url("/img/heroimg.jpg") no-repeat center center/cover; 
     min-height: 100vh;
     width: 100vw;
-    margin: 0px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.confirmationimage {
+    background: url("/img/confirmationphoto.jpg") no-repeat center center/cover;
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmationimagelogo {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    top: -100px;
+    left: 50px;
 }
 
 .herocontent {
@@ -583,8 +696,8 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 40%;    
-    right: 1%;
-    margin-right: 20px;
+    right: 10%;
+    margin: 0 auto;
 }
 
 .product-info {
@@ -634,6 +747,13 @@ footer {
     .topseller-card {
         display: flex;
         flex-direction: row;
+        width: 100%;
+    }
+
+    .small-product-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
         width: 100%;
     }
 
