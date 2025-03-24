@@ -67,7 +67,7 @@ h2 {
 
 h3 {
     font-family: Oswald, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     line-height: 5px;
     font-weight: lighter;
     color: var(--text-color);
@@ -92,19 +92,40 @@ a {
     font-weight: bold;
 }
 
+.ctasmall-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: right;
+}
 
 .ctasmall {
     color: var(--logo-color);
-    padding: 10px 2.5px;
+    padding: 10px 10px;
     border-radius: 15px;
     margin-right: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
+    text-align: center;
+    max-width: fit-content;
     background: var(--navigation-color);
     border: 3px solid var(--logo-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+.ctasmall-wide {
+    width: 30%;
+    color: var(--logo-color);
+    padding: 10px 10px;
+    border-radius: 15px;
+    text-align: center;
+    background: var(--logo-color);
+    border: 3px solid var(--navigation-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ctasmall-wide a {
+    color: var(--navigation-color);
+    text-decoration: none;
 }
 
 header {
@@ -204,28 +225,53 @@ header {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    padding-right: 5px;
-    padding-left: 5px;
 }
 
-.product {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 50%;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 5px;
+.productimg img {
+    width: 100%;
+    padding: 5px;
+    height: auto;
 }
-
-
 
 .gender {
     display: flex;
     flex-wrap: nowrap;
     width: 50%;
     height: 100%;
+    padding: 15px;
+}
+
+.gender-text h3 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.gender-text {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.gender-man {
+    background: url("/img/man.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 100%; 
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.gender-woman {
+    background: url(/img/woman.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 100%; 
+    margin-left: 15px;
+    border-radius: 5px;
 }
 
 .manimg, .womanimg {
@@ -240,9 +286,14 @@ header {
     width: 50%;
     height: auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
+
 }
+
+
 
 .splitcontainer {
     display: flex;
@@ -276,12 +327,26 @@ header {
 }
 
 
-.product-card {
-    width: 100%;
-    height: auto;
-    margin-right: 50px;
+
+.rating {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.6rem;
+    font-weight: lighter;
+}
+
+
+
+.product-rating-stars {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4px;
+}
+
+.product-rating-number {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
 
 .product-price {
@@ -307,35 +372,111 @@ header {
 
 }
 
-.productimg {
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-
-.product-info {
-    margin-right: 0px;
-}
 
 .article-no {
     font-size: 0.6rem;
 }
 
-.article-colors, .article-size {
+/* ---------
+
+Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Select Element) */
+
+.select-box {
+    border: 1px solid black;
+    appearance: none;
     display: flex;
-    flex-wrap: nowrap;
-    margin-top: px;
+    position: relative;
+    padding: 0 30px 0 10px;
+    width: 100%;
+    color: black;
+    background-color: white;
 }
 
-.color-options, .size-select {
+.size-select {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding-bottom: 5px;
+}
+
+.cart-select-box {
+    border: 1px solid black;
+    appearance: none;
+    display: flex;
+    position: relative;
+    padding: 0 30px 0 10px;
+    width: 100%;
+    color: black;
+    background-color: white;
+}
+
+.cart-size-select {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding-bottom: 5px;
+}
+
+/* ------- */
+
+.color-options, .select-options {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 20px;
+    margin-right: 50px;
+    height: 20px;
+    margin-top: 10px;
 }
+
+.article-colors, .article-size {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.shopping {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.product-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-card .productimg {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    max-height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .cart-product-card {
     width: 100%;
@@ -371,24 +512,33 @@ header {
 .cart-option-items {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-
-.cart-article-colors, .cart-article-size {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: px;
+.cart-color-options {
+    padding-top: 5px;
 }
 
-.cart-color-options, .cart-size-select {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-left: 20px;
-}
 
 .cart-product-price {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: bold;
+}
+
+.x-button {
+    background-color: white;
+    border: none;
+    color: var(--logo-color);
+}
+
+.cart-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
 }
 
 .rightcontainer, .order-summary {
@@ -452,6 +602,13 @@ header {
     width: 100%;
 }
 
+.order-info {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding-top: 50px;
+}
 
 
 .vertical-line {
@@ -494,13 +651,19 @@ form {
 form > button {
     display: flex;;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     float: right;
-    padding: 5px 15px;
-    background-color: #488595;
-    color: #fff;
-    border: none;
+    padding: 10px 10px;
+    width: 40%;
+    background-color: var(--logo-color);
+    color: var(--navigation-color);
+    border: 3px solid var(--navigation-color);
     border-radius: 15px;
+}
+
+form > button a {
+    color: var(--navigation-color);
+    text-decoration: none;
 }
 
 input[type=text], input[type=email], input[type=password], input[type=number] {
@@ -707,9 +870,7 @@ footer {
     margin: 0 auto;
 }
 
-.product-info {
-    margin: 5px;
-}
+
 
 .menubars{
     display: none;
@@ -749,13 +910,15 @@ footer {
         display: flex;
         flex-direction: row;
         width: 100%;
+        height: 80vh;
     }
 
-    .topseller-card {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+    .gender-text h3 a {
+      height: 100%;
+
     }
+
+
 
     .small-product-card {
         display: flex;
@@ -769,6 +932,17 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
+    }
+
+    .topseller-card {
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .splitcontainer {
+        flex-direction: column;
     }
 
 }
@@ -828,16 +1002,6 @@ footer {
         width: 100vw;
     }
 
-    .hero::before {
-        content: "";
-        background: rgba(0, 0, 0, 0.5);
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    }
-
     .herocontent {
         color: #fff;
         text-align: center;
@@ -849,6 +1013,15 @@ footer {
         top: 15%;
         left: 20%;
         
+    }
+
+    .cart-option-items {
+        display: block;
+        width: 40%;
+        margin-left: 1px;
+        height: auto;
+        align-items: space-around;
+        justify-content: space-around;
     }
 
     .footernav ul {
