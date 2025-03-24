@@ -945,12 +945,28 @@ footer {
         flex-direction: column;
     }
 
+    .confirmationleft, .confirmationimage {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
 
-    .navlinks, .navmountain, #menubars {
+    .navlinks, #menubars {
         display: none;
+    }
+    
+    .headermountain {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        position: absolute;
+        top: 10px;
+        left: 35%;
     }
 
     .headernav {
@@ -1013,6 +1029,24 @@ footer {
         top: 15%;
         left: 20%;
         
+    }
+
+    .confirmationleft {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .confirmationimage {
+        background: url("/img/confirmationphoto.jpg") no-repeat center center/cover;
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .cart-option-items {
