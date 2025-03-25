@@ -247,6 +247,7 @@ header {
     text-align: center;
 }
 
+
 .gender-text {
     display: flex;
     flex-wrap: nowrap;
@@ -255,7 +256,8 @@ header {
 }
 
 .gender-man {
-    background: url("/img/man.jpg") no-repeat center center/cover;
+    background: url("/img/man.jpg") no-repeat center;
+    background-size: cover;
     display: flex;
     flex-wrap: nowrap;
     width: 50%;
@@ -360,7 +362,7 @@ header {
     display: block;
     flex-wrap: nowrap;
     flex-direction: row;
-    width: 100%;
+    max-width: 250px;
     margin: 10px;
     padding: 10px;
 }
@@ -541,6 +543,25 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     padding: 0;
 }
 
+.suggestion-product-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.suggestion-product-price {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .rightcontainer, .order-summary {
    background-color: var(--container-gray);
     display: flex;
@@ -624,6 +645,15 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
 }
 
 form {
@@ -911,13 +941,23 @@ footer {
         flex-direction: row;
         width: 100%;
         height: 80vh;
+        
     }
+
 
     .gender-text h3 a {
       height: 100%;
 
     }
 
+    .productsplitright {
+        display: block;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        max-width: 500px;
+        margin-top: 50px;
+        padding-top: 50px;
+    }
 
 
     .small-product-card {
