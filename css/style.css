@@ -678,7 +678,7 @@ form {
     display: block;
 }
 
-form > button {
+form > a {
     display: flex;;
     flex-direction: column;
     align-items: center;
@@ -689,9 +689,10 @@ form > button {
     color: var(--navigation-color);
     border: 3px solid var(--navigation-color);
     border-radius: 15px;
+    cursor: pointer; /* Code tip from: https://stackoverflow.com/questions/56818626/why-cursor-doesnt-change-on-the-button */
 }
 
-form > button a {
+form > a {
     color: var(--navigation-color);
     text-decoration: none;
 }
