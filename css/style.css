@@ -257,24 +257,32 @@ header {
 
 .gender {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     width: 50%;
     height: 100%;
     padding: 15px;
 }
 
+
 .gender-text h3 {
     color: white;
+    font-weight: bolder;
     font-size: 1.5rem;
-    text-align: center;
+    height: 30px;
+    padding: 15px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
 .gender-text {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .gender-man {
@@ -416,15 +424,6 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     background-color: white;
 }
 
-.size-select {
-    width: 40px;
-    height: 100%;
-    position: absolute;
-    right: 0px;
-    display: flex;
-    justify-content: right;
-    padding-bottom: 5px;
-}
 
 .cart-select-box {
     border: 1px solid black;
@@ -437,14 +436,6 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     background-color: white;
 }
 
-.cart-size-select {
-    width: 40px;
-    height: 100%;
-    position: absolute;
-    right: 0px;
-    display: flex;
-    padding-bottom: 5px;
-}
 
 /* ------- */
 
