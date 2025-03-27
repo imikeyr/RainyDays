@@ -98,6 +98,13 @@ a {
     justify-content: right;
 }
 
+.ctasmall-wide-container {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
 .ctasmall {
     color: var(--logo-color);
     padding: 10px 10px;
@@ -112,8 +119,8 @@ a {
 }
 
 .ctasmall-wide {
-    width: 30%;
-    color: var(--logo-color);
+    width: 100%;
+    color: var(--navigation-color);
     padding: 10px 10px;
     border-radius: 15px;
     text-align: center;
@@ -121,6 +128,7 @@ a {
     border: 3px solid var(--navigation-color);
     text-decoration: none;
     font-weight: bold;
+
 }
 
 .ctasmall-wide a {
