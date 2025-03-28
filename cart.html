@@ -15,16 +15,16 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" id="menubars" class="menubars">
+        <input type="checkbox" id="menubars" class="menubars" aria-label="Menu bar">
         <label for="menubars" class="menubars"></label>
         <nav class="headernav">
             <ul>
-                <li class="headerlogo"><a href="index.html"><img class="headerlogo" src="img/RainyDays_TextLogoUnderline.png" alt="Rainy Days Logo"></a></li>
+                <li class="headerlogo"><a href="index.html" aria-label="Go to start page"><img class="headerlogo" src="img/RainyDays_TextLogoUnderline.png" alt="Rainy Days Logo"></a></li>
                 <li class="navlink-products"><a href="products.html">PRODUCTS</a></li>
                 <li class="navlink-about"><a href="comingsoon.html">ABOUT</a></li>
-                <li class="navmountain"><a href="index.html"><img class="headermountain" src="img/RainyDays_CroppeDLogo.png" alt="Rainy Days Mountain Logo"></a></li>
-                <li class="navicon-cart"><a href="cart.html" class="fas fa-shopping-cart"></a></li>
-                <li class="navicon-profile"><a href="comingsoon.html" class="fas fa-circle-user"></a></li>
+                <li class="navmountain"><a href="index.html" aria-label="Go to start page"><img class="headermountain" src="img/RainyDays_CroppeDLogo.png" alt="Rainy Days Mountain Logo"></a></li>
+                <li class="navicon-cart"><a href="cart.html" class="fas fa-shopping-cart" aria-label="Go to cart"></a></li>
+                <li class="navicon-profile"><a href="comingsoon.html" class="fas fa-circle-user" aria-label="Go to user profile"></a></li>
         </ul>
     </nav>
     </header>
@@ -35,7 +35,7 @@
                     <div class="cart">
                      <div class="cart-product-card">
                         <div class="cart-productimg">
-                            <a href="dewdrophiker.html"><img class="cart-productimg" src="img/RainyDays_Jacket5.jpg" alt="Dew Drop Hiker"></a>
+                            <a href="dewdrophiker.html" aria-label="Go to product page for Dew Drop Hiker"><img class="cart-productimg" src="img/RainyDays_Jacket5.jpg" alt="Dew Drop Hiker"></a>
                         </div>
                          <div class="cart-product-info">
                              <div class="cart-product-text">
@@ -69,7 +69,7 @@
                              </div>
                             
                                 <div class="cart-product-remove">
-                                    <button class="x-button"><a href="">X</a></button>
+                                    <a href="cart.html">X</a>
                                 </div>
                             </div>
                         </div>
@@ -78,10 +78,10 @@
                     </div>
                     <div class="cart-buttons">
                     <div class="ctasmall-container">
-                        <a class="ctasmall" href="products.html">ADD MORE</a>
+                        <a class="ctasmall" href="products.html" aria-label="Go to products page to add more to your cart">ADD MORE</a>
                         </div>
                         <div class="ctasmall-wide-container">
-                            <a class="ctasmall-wide" href="checkout.html">CHECKOUT</a>
+                            <a class="ctasmall-wide" href="checkout.html" aria-label="Go to checkout page">CHECKOUT</a>
                             </div>
                         </div>
             </div>
@@ -116,7 +116,7 @@
         <nav class="footernav">
             <div class="footerlinks">
             <ul class="footerlogo">
-                <li><a href="index.html"><img class="footerlogo" src="img/RainyDays_HalfLogo.png" alt="Rainy Days Logo"></a></li>
+                <li><a href="index.html" aria-label="Got to start page"><img class="footerlogo" src="img/RainyDays_HalfLogo.png" alt="Rainy Days Logo"></a></li>
                 </ul>
                 <ul class="shoplinks">
                 <li class="shoplinks"><a href="products.html"><b>SHOP</b></a></li>

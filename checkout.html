@@ -15,16 +15,16 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" id="menubars" class="menubars">
+        <input type="checkbox" id="menubars" class="menubars" aria-label="Menu bar">
         <label for="menubars" class="menubars"></label>
         <nav class="headernav">
             <ul>
-                <li class="headerlogo"><a href="index.html"><img class="headerlogo" src="img/RainyDays_TextLogoUnderline.png" alt="Rainy Days Logo"></a></li>
+                <li class="headerlogo"><a href="index.html" aria-label="Go to start page"><img class="headerlogo" src="img/RainyDays_TextLogoUnderline.png" alt="Rainy Days Logo"></a></li>
                 <li class="navlink-products"><a href="products.html">PRODUCTS</a></li>
                 <li class="navlink-about"><a href="comingsoon.html">ABOUT</a></li>
-                <li class="navmountain"><a href="index.html"><img class="headermountain" src="img/RainyDays_CroppeDLogo.png" alt="Rainy Days Mountain Logo"></a></li>
-                <li class="navicon-cart"><a href="cart.html" class="fas fa-shopping-cart"></a></li>
-                <li class="navicon-profile"><a href="comingsoon.html" class="fas fa-circle-user"></a></li>
+                <li class="navmountain"><a href="index.html" aria-label="Go to start page"><img class="headermountain" src="img/RainyDays_CroppeDLogo.png" alt="Rainy Days Mountain Logo"></a></li>
+                <li class="navicon-cart"><a href="cart.html" class="fas fa-shopping-cart" aria-label="Go to cart"></a></li>
+                <li class="navicon-profile"><a href="comingsoon.html" class="fas fa-circle-user" aria-label="Go to user profile"></a></li>
         </ul>
     </nav>
     </header>
@@ -35,26 +35,26 @@
                 <div class="checkout">
                    
                     <p>Please fill out your details and payment information.</p>
-                    <div id="paypal"><a href="http://www.paypal.com" target="_blank">
+                    <div id="paypal"><a href="http://www.paypal.com" target="_blank" aria-label="Pay with paypal">
                     <p id="paypalicon">Buy with<img src="img/PayPalLogo.svg" alt="Pay Pal Logo"></p></a>
                     </div>
                     <form id="checkout-details" action="confirmation.html" method="get">
                         <h4>Shipping Information</h4>
-                        <input type="text" id="name" name="name" placeholder="Name">
-                        <input type="email" id="email" name="email" placeholder="Email">
-                        <input type="text" id="address" name="address" placeholder="Address">
+                        <input type="text" id="name" name="name" placeholder="Name" aria-label="Name">
+                        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email">
+                        <input type="text" id="address" name="address" placeholder="Address" aria-label="Address">
                         <div class="form-control">
-                        <input type="number" id="postcode" name="postcode" placeholder="Post Code">
-                        <input type="text" id="city" name="city" placeholder="City">
+                        <input type="number" id="postcode" name="postcode" placeholder="Post Code" aria-label="Post Code">
+                        <input type="text" id="city" name="city" placeholder="City" aria-label="City">
                         </div>
-                        <input type="text" id="country" name="country" placeholder="Country">
+                        <input type="text" id="country" name="country" placeholder="Country" aria-label="Country">
                         <h4>Payment Information</h4>
                         <div class="paymentdiv">
-                            <input type="number" id="cardnumber" name="cardnumber" placeholder="Card Number">
-                            <input type="text" id="cardname" name="cardname" placeholder="Name on Card">
+                            <input type="number" id="cardnumber" name="cardnumber" placeholder="Card Number" aria-label="Card Number">
+                            <input type="text" id="cardname" name="cardname" placeholder="Name on Card" aria-label="Name on Card">
                             <div class="form-control">
-                            <input type="text" id="expdate" name="expdate" placeholder="Expiration Date">
-                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                            <input type="text" id="expdate" name="expdate" placeholder="Expiration Date" aria-label="Expiration Date">
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV" aria-label="CVV number">
                             </div>
                         </div>
                         <a href="confirmation.html">PLACE ORDER</a>
@@ -87,7 +87,7 @@
             <nav class="footernav">
                 <div class="footerlinks">
                 <ul class="footerlogo">
-                    <li><a href="index.html"><img class="footerlogo" src="img/RainyDays_HalfLogo.png" alt="Rainy Days Logo"></a></li>
+                    <li><a href="index.html" aria-label="Got to start page"><img class="footerlogo" src="img/RainyDays_HalfLogo.png" alt="Rainy Days Logo"></a></li>
                     </ul>
                     <ul class="shoplinks">
                     <li class="shoplinks"><a href="products.html"><b>SHOP</b></a></li>
@@ -105,7 +105,7 @@
                     <li class="supportlinks"><a href="comingsoon.html">Contact Us</a></li>
                 </ul>
             </div>
-            </nav>            
+            </nav>         
         </footer> 
 </body>
 </html>
