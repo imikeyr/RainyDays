@@ -187,7 +187,7 @@ header {
     padding-top: 5px;
 }
 
-.fas { /* https://stackoverflow.com/questions/42341927/font-awesome-icon-size-not-increasing */
+.fas, .fab { /* https://stackoverflow.com/questions/42341927/font-awesome-icon-size-not-increasing */
     font-size: 1.5em;
     color: var(--logo-color);
 }
@@ -426,6 +426,7 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     width: 100%;
     color: black;
     background-color: white;
+    cursor: pointer
 }
 
 
@@ -438,6 +439,7 @@ Based on YouTube video: https://www.youtube.com/watch?v=vnftyztz6ss (Style Selec
     width: 100%;
     color: black;
     background-color: white;
+    cursor: pointer;
 }
 
 
@@ -811,26 +813,37 @@ footer {
 
 .shoplinks {
     display: block;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
-    padding: 10px;
+    width: auto;
+    padding-top: 20px;
 }
 
 .policieslinks {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
-    padding: 10px;
+    width: auto;
+    padding-top: 20px;
 }
 
 .supportlinks {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
-    padding: 10px;
+    width: auto;
+    padding-top: 20px;
+}
+
+
+
+.sociallinks-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: space-evenly;
 }
 
 .collage {
@@ -1027,12 +1040,12 @@ footer {
     }
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     
     .footerlinks {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
         margin: 0;
         padding: 0;
     }
@@ -1041,6 +1054,20 @@ footer {
         height: 400px;
         margin: 0;
         padding: 0;
+    }
+
+    .sociallinks {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 10px;
+    }
+
+    .sociallinks-container {
+        display: block;
+        flex-direction: row;
+        justify-content: flex-start
     }
 }
 
