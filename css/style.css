@@ -187,6 +187,10 @@ header {
     padding-top: 5px;
 }
 
+.fas { /* https://stackoverflow.com/questions/42341927/font-awesome-icon-size-not-increasing */
+    font-size: 1.5em;
+    color: var(--logo-color);
+}
 
 .navicon-cart {
     display: flex;
@@ -363,7 +367,7 @@ header {
 .rating {
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: lighter;
 }
 
@@ -406,7 +410,7 @@ header {
 
 
 .article-no {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 /* ---------
@@ -830,7 +834,7 @@ footer {
 }
 
 .collage {
-    background-color: var(--secondary-color);
+    background-color: var(--navigation-color);
     display: flex;
     flex-direction: row;
     width: 90%;
@@ -862,7 +866,7 @@ footer {
 
 .collage-text > p {
     font-size: 1rem;    
-    color: #fff;
+    color: var(--main-color);
     margin: 20px;
     padding: 10px;
 }   
